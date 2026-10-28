@@ -1,0 +1,393 @@
+/* Dashboard "Web - Dashboard v2" (Figma node 33:2). Warna memakai token brand. */
+
+.dash {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--brand-cream);
+}
+
+/* Header bersama ada di AppHeader.css. */
+
+/* ---- Main ---- */
+.dash__main {
+  flex: 1;
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 32px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.dash__heading {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dash__title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+  color: var(--brand-black);
+}
+
+.dash__subtitle {
+  margin: 0;
+  font-size: 14px;
+  color: var(--brand-gray-dark);
+}
+
+.dash__state,
+.dash__empty {
+  margin: 0;
+  font-size: 12px;
+  color: var(--brand-gray-dark);
+}
+
+/* ---- Grid 12 kolom ---- */
+.dash__grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.dash__card {
+  padding: 21px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.dash__card--a {
+  grid-column: span 5;
+}
+.dash__card--b {
+  grid-column: span 3;
+}
+.dash__card--c {
+  grid-column: span 4;
+}
+.dash__card--d,
+.dash__card--e,
+.dash__card--f,
+.dash__card--g {
+  grid-column: span 6;
+}
+
+/* ---- Judul kartu ---- */
+.dash-card__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.dash-card__head-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dash-card__title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--brand-black);
+}
+
+.dash-card__subtitle {
+  margin: 0;
+  font-size: 10px;
+  color: var(--brand-gray-dark);
+}
+
+.dash-card__total {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--brand-black);
+}
+
+.dash-card__note {
+  font-size: 10px;
+  color: var(--brand-gray-dark);
+}
+
+/* ---- Kartu total emisi ---- */
+.dash-total {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.dash-total__label {
+  margin: 0;
+  font-size: 12px;
+  color: var(--brand-gray-dark);
+}
+
+.dash-total__value {
+  margin: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.dash-total__number {
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -0.75px;
+  color: var(--brand-black);
+}
+
+.dash-total__unit {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--brand-black);
+}
+
+.dash-total__delta {
+  margin: 4px 0 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--brand-primary-dark);
+}
+
+.dash-total__delta svg {
+  width: 14px;
+  height: 14px;
+}
+
+.dash-total__spark {
+  flex: none;
+  width: 112px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dash-total__spark-chart {
+  width: 112px;
+  height: 48px;
+}
+
+.dash-total__spark-caption {
+  font-size: 10px;
+  color: var(--brand-gray-dark);
+}
+
+.dash-stats {
+  margin-top: auto;
+  padding-top: 17px;
+  border-top: 1px solid var(--brand-border);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.dash-stats__item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dash-stats__item + .dash-stats__item {
+  padding-left: 12px;
+  border-left: 1px solid var(--brand-border);
+}
+
+.dash-stats__label {
+  font-size: 10px;
+  color: var(--brand-gray-dark);
+}
+
+.dash-stats__value {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--brand-black);
+}
+
+/* ---- Fakultas tertinggi ---- */
+.dash-rank-name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--brand-black);
+}
+
+.dash-ranks {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dash-rank__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 10px;
+  color: var(--brand-black);
+}
+
+.dash-rank__value {
+  font-weight: 700;
+}
+
+/* ---- Bar bersama (rank & sebaran fakultas) ---- */
+.dash-track {
+  height: 6px;
+  border-radius: 999px;
+  background: var(--brand-soft-green);
+  overflow: hidden;
+}
+
+.dash-rank .dash-track {
+  margin-top: 4px;
+}
+
+.dash-track__fill {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: var(--brand-primary);
+}
+
+.dash-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dash-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dash-bar__name {
+  flex: none;
+  width: 80px;
+  font-size: 10px;
+  color: var(--brand-black);
+}
+
+.dash-bar__track {
+  flex: 1;
+}
+
+.dash-bar__value {
+  flex: none;
+  width: 32px;
+  text-align: right;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--brand-black);
+}
+
+/* ---- Badge / label ---- */
+.dash-badge {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  padding: 3px 9px;
+  border-radius: 3px;
+  background: var(--brand-soft-green);
+  color: var(--brand-primary-dark);
+  font-size: 10px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* ---- Grafik ---- */
+.dash-chart {
+  width: 100%;
+  height: 190px;
+}
+
+.dash-chart--sm {
+  height: 150px;
+}
+
+/* ---- Tabel ---- */
+.dash-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.dash-table th {
+  padding: 0 0 9px;
+  text-align: left;
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--brand-gray-dark);
+}
+
+.dash-table td {
+  padding: 8px 0 9px;
+  border-top: 1px solid var(--brand-border);
+  font-size: 10px;
+  color: var(--brand-black);
+}
+
+.dash-table__strong {
+  font-weight: 700;
+}
+
+/* ---- Tautan "Lihat semua" ---- */
+.dash-see-all {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--brand-primary);
+  text-decoration: none;
+}
+
+.dash-see-all:hover {
+  text-decoration: underline;
+}
+
+/* ---- Baris catatan ---- */
+.dash-note {
+  grid-column: 1 / -1;
+  min-height: 40px;
+  margin: 0;
+  padding: 8px 12px;
+  border-radius: 3px;
+  background: var(--brand-soft-green);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--brand-primary-dark);
+}
+
+.dash-note svg {
+  flex: none;
+  width: 16px;
+  height: 16px;
+}
+
+/* ---- Layar sempit: tumpuk semua kartu ---- */
+@media (max-width: 1080px) {
+  .dash__main {
+    padding: 24px 20px;
+  }
+
+  .dash__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dash__grid > * {
+    grid-column: auto;
+  }
+}
