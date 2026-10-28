@@ -1,0 +1,84 @@
+.login {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  background: var(--brand-cream);
+}
+
+/* Spesifisitas dinaikkan agar radius 4px desain menang dari .card di index.css,
+   yang termuat setelah CSS halaman ini. */
+.login__card {
+  width: 100%;
+  max-width: 448px;
+  padding: 33px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.login__title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.6px;
+  line-height: 32px;
+  color: var(--brand-black);
+}
+
+.login__subtitle {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--brand-gray-dark);
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 24px;
+}
+
+.login__remember {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--brand-gray-dark);
+  cursor: pointer;
+}
+
+.login__remember input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.login__check {
+  flex: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--brand-border);
+  border-radius: 4px;
+  background: var(--brand-white);
+}
+
+.login__remember input:checked + .login__check {
+  border-color: var(--brand-primary);
+  background: var(--brand-primary) url('../assets/check.svg') center / 14px 14px no-repeat;
+}
+
+.login__remember input:focus-visible + .login__check {
+  outline: 2px solid var(--brand-lime);
+  outline-offset: 1px;
+}
+
+.login__error {
+  margin: 0;
+  font-size: 13px;
+  color: var(--brand-danger);
+}
