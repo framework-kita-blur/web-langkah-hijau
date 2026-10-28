@@ -1,0 +1,114 @@
+/* Token & gaya dasar. Warna mengikuti brand mobile (src/theme.ts). */
+:root {
+  --brand-primary: #266210;
+  --brand-primary-dark: #063b00;
+  --brand-lime: #90b800;
+  --brand-yellow: #e1e100;
+  --brand-cream: #f9fbf3;
+  --brand-soft-green: #e8efd5;
+  --brand-white: #ffffff;
+  --brand-border: #e5e5e5;
+  --brand-gray: #737373;
+  --brand-gray-dark: #4b5563;
+  --brand-text: #1f2937;
+  --brand-black: #0a0a0a;
+  --brand-danger: #d33c33;
+  --brand-danger-soft: #f9e6e3;
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--brand-text);
+  background: var(--brand-cream);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+/* ---- Button ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 44px;
+  padding: 0 16px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  cursor: pointer;
+}
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.btn--primary {
+  background: var(--brand-primary);
+  color: var(--brand-cream);
+}
+.btn--outline {
+  background: var(--brand-white);
+  color: var(--brand-primary);
+  border-color: var(--brand-primary);
+}
+.btn--ghost {
+  background: transparent;
+  color: var(--brand-primary);
+  padding: 0 8px;
+  height: auto;
+}
+
+/* ---- Card ---- */
+.card {
+  background: var(--brand-white);
+  border: 1px solid var(--brand-border);
+  border-radius: 8px;
+}
+
+/* ---- Field ---- */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.field__label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--brand-text);
+}
+.field__input {
+  height: 44px;
+  padding: 0 12px;
+  border: 1px solid var(--brand-border);
+  border-radius: 4px;
+  background: var(--brand-cream);
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--brand-text);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.field__input::placeholder {
+  color: var(--brand-gray);
+}
+.field__input:focus {
+  outline: 2px solid var(--brand-lime);
+  outline-offset: 1px;
+}
